@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-black: #181818;
+  --color-brand-yellow: #f5d106;
+  --color-brand-pureBlack: #000000;
+  --font-montserrat: 'Montserrat', sans-serif;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9fafb;
+  font-family: var(--font-montserrat);
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 50s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused; 
+}
